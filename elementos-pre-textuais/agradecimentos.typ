@@ -1,16 +1,16 @@
 #let imprimir() = [
   #import "../constants.typ": titulo-da-pagina
-  #titulo-da-pagina([Agradecimentos])
+  #show: titulo-da-pagina.with(titulo: [Agradecimentos])
 
   Agradeço, primeiramente, a Deus, criador de todas as coisas que nos animamos a
   estudar;
 
-  A Leslie Lamport, por criar o LaTeX e mostrar que Microsoft
-  Word é uma grandessíssema de uma porcaria;
+  A Leslie Lamport, por criar o LaTeX e mostrar que Microsoft Word é uma
+  grandessíssema de uma porcaria;
 
-  A Laurenz por desenvolver o Typst, que é uma versão aprimorada e
-  simplificada de LaTeX, me permitindo escrever documentos ainda mais bonitos de
-  maneira ainda mais rápida;
+  A Laurenz por desenvolver o Typst, que é uma versão aprimorada e simplificada
+  de LaTeX, me permitindo escrever documentos ainda mais bonitos de maneira
+  ainda mais rápida;
 
   Ao pessoal que desenvolveu o template abnTeX2 para LaTeX, que serviu de base
   para o desenvolvimento deste template;

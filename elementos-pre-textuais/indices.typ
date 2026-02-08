@@ -9,18 +9,18 @@
   #let listas = ()
 
   #listas.push([
-    #const.titulo-da-pagina([Lista de ilustrações])
+    #show: const.titulo-da-pagina.with(titulo: [Lista de ilustrações])
     #outline(target: figure.where(kind: image))
   ])
 
   #listas.push([
-    #const.titulo-da-pagina([Lista de tabelas])
+    #show: const.titulo-da-pagina.with(titulo: [Lista de tabelas])
     #outline(target: figure.where(kind: table))
   ])
 
   #listas.push([
     #import "../conteudo/lista-de-abreviaturas.typ": abreviaturas
-    #const.titulo-da-pagina([Lista de abreviaturas e siglas])
+    #show: const.titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
     #v(1cm)
     #set align(right)
     #block(width: 90%)[
@@ -37,7 +37,7 @@
 
   #listas.push([
     #import "../conteudo/lista-de-simbolos.typ": simbolos
-    #const.titulo-da-pagina([Lista de símbolos])
+    #show: const.titulo-da-pagina.with(titulo: [Lista de símbolos])
     #v(1cm)
     #set align(right)
     #block(width: 90%)[
@@ -86,7 +86,7 @@
     }
   }
 
-  #const.titulo-da-pagina([Sumário])
+  #show: const.titulo-da-pagina.with(titulo: [Sumário])
   #outline()
   #pagebreak()
 ]

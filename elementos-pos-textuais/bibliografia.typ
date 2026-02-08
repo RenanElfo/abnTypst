@@ -5,7 +5,7 @@
 // #const.titulo-da-pagina([Referências])
 #show bibliography: it => {
   show heading: h => {
-    show: const.titulo-da-pagina
+    show: const.titulo-da-pagina.with(titulo: it.title)
     h
   }
   it

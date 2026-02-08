@@ -1,6 +1,6 @@
 #let imprimir() = [
   #import "../constants.typ/" as const
-  #const.titulo-da-pagina([Lista de tabelas])
+  #show: const.titulo-da-pagina.with(titulo: [Lista de tabelas])
 
   TODO!
 
