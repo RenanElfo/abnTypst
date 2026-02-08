@@ -3,22 +3,19 @@
   import "parameters.typ" as parameters
   import "conteudo/resumo.typ" as resumo
 
-  let x-margin = if parameters.impressao-frente-e-verso {
-    (inside: 3cm, outside: 2cm)
-  } else {
-    (left: 3cm, right: 2cm)
-  }
-
   set document(
     title: parameters.titulo-do-trabalho,
     author: (parameters.nome-do-autor),
     description: [#resumo],
     keywords: parameters.palavras-chave + parameters.keywords,
   )
-  set page(
-    "a4",
-    margin: (top: 3cm, bottom: 2cm, ..x-margin),
-  )
+
+  let x-margin = if parameters.impressao-frente-e-verso {
+    (inside: 3cm, outside: 2cm)
+  } else {
+    (left: 3cm, right: 2cm)
+  }
+  set page("a4", margin: (top: 3cm, bottom: 2cm, ..x-margin))
   set par(
     justify: true,
     first-line-indent: (all: true, amount: 1.3cm),
