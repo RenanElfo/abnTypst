@@ -1,17 +1,7 @@
 #let template = doc => {
   import "constants.typ" as const
   import "parameters.typ" as parameters
-
-  import "elementos-pre-textuais/capa.typ" as capa
-  import "elementos-pre-textuais/folha-de-rosto.typ" as folha-de-rosto
-  import "elementos-pre-textuais/ficha-catalografica.typ" as ficha-catalografica
-  import "elementos-pre-textuais/folha-de-aprovacao.typ" as folha-de-aprovacao
-  import "elementos-pre-textuais/dedicatoria.typ" as dedicatoria
-  import "elementos-pre-textuais/agradecimentos.typ" as agradecimentos
-  import "elementos-pre-textuais/epigrafe.typ" as epigrafe
-  import "elementos-pre-textuais/abstract.typ" as abstract
-  import "elementos-pre-textuais/indices.typ" as indices
-  import "elementos-pre-textuais/resumo.typ" as resumo
+  import "conteudo/resumo.typ" as resumo
 
   let x-margin = if parameters.impressao-frente-e-verso {
     (inside: 3cm, outside: 2cm)
@@ -40,16 +30,16 @@
   show link: set text(fill: rgb("#0000ee"))
   set heading(numbering: "1.1")
 
-  capa.imprimir()
-  folha-de-rosto.imprimir()
-  ficha-catalografica.imprimir()
-  folha-de-aprovacao.imprimir()
-  dedicatoria.imprimir()
-  agradecimentos.imprimir()
-  epigrafe.imprimir()
-  resumo.imprimir()
-  abstract.imprimir()
-  indices.imprimir()
+  include "elementos-pre-textuais/capa.typ"
+  include "elementos-pre-textuais/folha-de-rosto.typ"
+  include "elementos-pre-textuais/ficha-catalografica.typ"
+  include "elementos-pre-textuais/folha-de-aprovacao.typ"
+  include "elementos-pre-textuais/dedicatoria.typ"
+  include "elementos-pre-textuais/agradecimentos.typ"
+  include "elementos-pre-textuais/epigrafe.typ"
+  include "elementos-pre-textuais/resumo.typ"
+  include "elementos-pre-textuais/abstract.typ"
+  include "elementos-pre-textuais/indices.typ"
 
   doc
 
