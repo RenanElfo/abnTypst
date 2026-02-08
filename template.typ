@@ -39,14 +39,7 @@
   set enum(numbering: "a)")
   show link: set text(fill: rgb("#0000ee"))
   set heading(numbering: "1.1")
-  // Isto esta comentado aqui ate eu descobri uma maneira melhor
-  // de saber o tamanho da fonte no sumario sem precisar de
-  // valores hard coded
-  // #show heading: it => {
-  //   let heading-font-size = state("heading-font-size")
-  //   heading-font-size.update(text.size)
-  //   it
-  // }
+
   capa.imprimir()
   folha-de-rosto.imprimir()
   ficha-catalografica.imprimir()

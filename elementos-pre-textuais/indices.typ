@@ -4,7 +4,7 @@
   #set outline(title: [])
   #show outline.entry: it => link(
     it.element.location(),
-    it.indented([#it.prefix() ---], [#it.inner()])
+    it.indented([#it.prefix() ---], [#it.inner()]),
   )
   #let listas = ()
 
@@ -55,38 +55,37 @@
   #listas.reduce((acc, it) => acc + pagebreak() + it)
   #pagebreak(to: if impressao-frente-e-verso { "odd" } else { none })
 
-  #show outline.entry: it => link(
-    it.element.location(),
-    [
-      // Isto esta comentado aqui ate eu descobri uma maneira melhor
-      // de saber o tamanho da fonte no sumario sem precisar de
-      // valores hard coded
-      // #let heading-font-size = state("heading-font-size")
-      // #heading-font-size.at(it.element.location())
-      // #set text(size: heading-font-size.at(it.element.location()))
-      #let size = if (type(it.element) == content
-                    and it.element.func() == heading) {
-        if it.element.level == 1 {
-          1.4em
-        } else if it.element.level == 2 {
-          1.2em
-        } else {
-          1.0em
-        }
+  #show outline.entry: it => [
+    #let size = if (
+      type(it.element) == content and it.element.func() == heading
+    ) {
+      let level = it.element.level
+      if level == 1 {
+        1.4em
+      } else if level == 2 {
+        1.2em
       } else {
         1.0em
       }
-      #set text(size: size)
-      #set par(first-line-indent: 0pt)
-      #let inner = if it.element.func() == heading and it.element.level == 1 {
-        upper(it.inner())
-      } else {
-        it.inner()
-      }
-      #grid(columns: (1fr, 7fr), align: bottom, it.prefix(), inner)
-      // #it.fields()
-    ],
-  )
+    } else {
+      1.0em
+    }
+    #set text(size: size)
+    #grid(
+      columns: (1fr, 7fr),
+      align: bottom,
+      it.prefix(), it.inner(),
+    )
+  ]
+  #show outline.entry: it => link(it.element.location(), it)
+  #show outline.entry: it => {
+    if it.element.func() == heading and it.element.level == 1 {
+      upper(it)
+    } else {
+      it
+    }
+  }
+
   #const.titulo-da-pagina([Sumário])
   #outline()
   #pagebreak()
