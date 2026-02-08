@@ -2,12 +2,9 @@
 #import "/parameters.typ" as parameters
 
 #pagebreak()
-// #const.titulo-da-pagina([Referências])
 #show bibliography: it => {
-  show heading: h => {
-    show: const.titulo-da-pagina.with(titulo: it.title)
-    h
-  }
+  show heading: h => none
+  show: const.titulo-da-pagina.with(titulo: it.title)
   it
 }
 #bibliography(
