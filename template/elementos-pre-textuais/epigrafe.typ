@@ -1,4 +1,4 @@
-#import "../parameters.typ" as param
+#import "/parameters.typ" as param
 #set align(right)
 #set text(hyphenate: false)
 #let frase = dictionary(param).at("frase-epigrafe", default: "")

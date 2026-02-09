@@ -1,5 +1,5 @@
 #import "../constants.typ" as const
-#import "../parameters.typ" as param
+#import "/parameters.typ" as param
 #set align(center)
 #text(size: 14pt, param.nome-do-autor)
 

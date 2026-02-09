@@ -1,5 +1,5 @@
 #import "../constants.typ" as const
-#import "../parameters.typ" as param
+#import "/parameters.typ" as param
 
 #set align(bottom + center)
 #let number-of-pages = context [#counter(page).final().at(0)]

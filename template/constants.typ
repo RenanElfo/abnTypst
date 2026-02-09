@@ -1,4 +1,4 @@
-#import "parameters.typ" as param
+#import "/parameters.typ" as param
 
 #let DATA = (
   dia: param.dia-de-aprovacao,

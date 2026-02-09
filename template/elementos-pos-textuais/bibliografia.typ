@@ -1,4 +1,4 @@
-#import "/constants.typ" as const
+#import "/template/constants.typ" as const
 #import "/parameters.typ" as parameters
 
 #pagebreak()

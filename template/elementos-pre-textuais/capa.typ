@@ -1,4 +1,4 @@
-#import "../parameters.typ" as parameters
+#import "/parameters.typ" as parameters
 #grid(
   columns: (0.14fr, 0.86fr),
   gutter: 15pt,

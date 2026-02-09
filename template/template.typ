@@ -1,7 +1,7 @@
 #let template = doc => {
   import "constants.typ" as const
-  import "parameters.typ" as parameters
-  import "conteudo/resumo.typ" as resumo
+  import "/parameters.typ" as parameters
+  import "/conteudo/resumo.typ" as resumo
 
   set document(
     title: parameters.titulo-do-trabalho,

@@ -1,5 +1,5 @@
-#import "template.typ": template
-#import "constants.typ" as const
+#import "template/template.typ": template
+#import "template/constants.typ" as const
 
 #show: template
 
@@ -18,11 +18,15 @@
 #lorem(50)
 
 #figure(
-  image("elementos-pre-textuais/logo_unifor.png", width: 20%),
-  caption: [Hello World]
+  image("template/elementos-pre-textuais/logo_unifor.png", width: 20%),
+  caption: [Hello World],
 )
 
 #figure(
-  align(center, table(columns: 2, [Hello], [World], [Herou], [Worudo])),
-  caption: [Hello world table]
+  align(center, table(
+    columns: 2,
+    [Hello], [World],
+    [Herou], [Worudo],
+  )),
+  caption: [Hello world table],
 )

@@ -1,5 +1,5 @@
 #import "../constants.typ" as const
-#import "../parameters.typ": impressao-frente-e-verso
+#import "/parameters.typ": impressao-frente-e-verso
 #set outline(title: [])
 #show outline.entry: it => link(
   it.element.location(),
@@ -18,7 +18,7 @@
 ])
 
 #listas.push([
-  #import "../conteudo/lista-de-abreviaturas.typ": abreviaturas
+  #import "/conteudo/lista-de-abreviaturas.typ": abreviaturas
   #show: const.titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
   #v(1cm)
   #set align(right)
@@ -35,7 +35,7 @@
 ])
 
 #listas.push([
-  #import "../conteudo/lista-de-simbolos.typ": simbolos
+  #import "/conteudo/lista-de-simbolos.typ": simbolos
   #show: const.titulo-da-pagina.with(titulo: [Lista de símbolos])
   #v(1cm)
   #set align(right)
