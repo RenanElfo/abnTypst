@@ -24,14 +24,16 @@
 ]
 
 #v(1cm)
-#[
-  #set text(size: 12pt, hyphenate: false)
-  #set block(width: 6cm, inset: (top: 0.3cm), stroke: (top: 1pt))
-  #block[#param.orientador#linebreak()Orientador -- #param.instituicao]\
-  #for coorientador in param.coorientadores [
-    #block[#coorientador#linebreak()Coorientador -- #param.instituicao]\
-  ]
-  #block[#param.nome-do-autor#linebreak()#param.instituicao]
-]
+#{
+  set text(size: 12pt, hyphenate: false)
+  set block(width: 6cm, inset: (top: 0.3cm), stroke: (top: 1pt))
+  block[#param.orientador#linebreak()Orientador -- #param.instituicao]
+  linebreak()
+  for coorientador in param.coorientadores {
+    block[#coorientador#linebreak()Coorientador -- #param.instituicao]
+    linebreak()
+  }
+  block[#param.nome-do-autor#linebreak()#param.instituicao]
+}
 
 #pagebreak()
