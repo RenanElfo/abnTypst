@@ -27,6 +27,16 @@
   show link: set text(fill: rgb("#0000ee"))
   set heading(numbering: "1.1")
 
+  set table(stroke: (x, y) => (
+    top: if y <= 1 { 1pt } else { 0pt },
+    bottom: 1pt,
+  ))
+
+  show figure: it => {
+    text(size: 10pt, it.caption)
+    it.body
+  }
+
   include "elementos-pre-textuais/capa.typ"
   include "elementos-pre-textuais/folha-de-rosto.typ"
   include "elementos-pre-textuais/ficha-catalografica.typ"
@@ -41,4 +51,15 @@
   doc
 
   include "elementos-pos-textuais/bibliografia.typ"
+}
+
+#let built-in-figure = figure
+#let figure(fonte: none, ..args) = {
+  if fonte == none {
+    panic("")
+  }
+  align(center, block(breakable: false, {
+    built-in-figure(..args)
+    text(size: 10pt, { "Fonte: " + fonte })
+  }))
 }

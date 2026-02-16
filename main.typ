@@ -1,6 +1,5 @@
-#import "template/template.typ": template
+#import "template/template.typ": *
 #import "template/constants.typ" as const
-
 #show: template
 
 = Espaçamento
@@ -19,16 +18,20 @@
 = Figuras
 == Imagem
 #figure(
+  fonte: "Não foi preciso",
   image("template/elementos-pre-textuais/logo_unifor.png", width: 20%),
-  caption: [Hello World],
+  caption: [Logo da Unifor],
 )
 
 == Tabela
 #figure(
+  fonte: "Vozes da minha cabeça",
   align(center, table(
-    columns: 2,
-    [Hello], [World],
-    [Herou], [Worudo],
+    columns: 4,
+    table.header[Hello][World][!][?],
+    [Herou], [Worudo], [!], [?],
+    [Olá], [Mundo], [!], [?],
+    [Bonjour], [Monde], [!], [?],
   )),
   caption: [Hello world table],
 )
