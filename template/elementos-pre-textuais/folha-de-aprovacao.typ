@@ -13,8 +13,8 @@
 #let dia = const.DATA.dia
 #let dia = if dia != 1 [#dia] else [1º]
 #align(left)[
-  Aprovado(a) em: #dia de #lower(param.mes-de-aprovacao) de
-  #param.ano-de-aprovacao
+  Aprovado(a) em: #dia de #lower(const.DATA.mes) de
+  #const.DATA.ano
 ]
 
 #v(1cm)

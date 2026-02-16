@@ -1,9 +1,24 @@
 #import "/parameters.typ" as param
 
+#let MONTHS = (
+  "janeiro",
+  "fevereiro",
+  "março",
+  "abril",
+  "maio",
+  "junho",
+  "julho",
+  "agosto",
+  "setembro",
+  "outubro",
+  "novembro",
+  "dezembro",
+)
+
 #let DATA = (
-  dia: param.dia-de-aprovacao,
-  mes: param.mes-de-aprovacao,
-  ano: param.ano-de-aprovacao,
+  dia: param.data-de-aprovacao.day(),
+  mes: MONTHS.at(param.data-de-aprovacao.month() - 1),
+  ano: param.data-de-aprovacao.year(),
 )
 #let LOCAL-E-DATA = align(center, upper(strong[
   #param.localidade\
