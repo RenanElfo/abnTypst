@@ -15,6 +15,19 @@
 #set par(leading: const.DOUBLE-SPACING)
 #lorem(50)
 
+= Citações
+
+Uma vez, um anão medieval chamado Gimli disse: #quote(text(
+  lang: "en",
+  emph[Never trust an Elf!],
+)).
+
+#quote(
+  attribution: "Einstein",
+  lorem(50),
+  block: true,
+)
+
 = Figuras
 == Imagem
 #figure(

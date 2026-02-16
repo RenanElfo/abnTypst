@@ -37,6 +37,15 @@
     it.body
   }
 
+  show quote.where(block: true): it => {
+    set text(size: 10em / 12)
+    align(right, block(
+      width: 80%,
+      align(left, it),
+    ))
+  }
+
+
   include "elementos-pre-textuais/capa.typ"
   include "elementos-pre-textuais/folha-de-rosto.typ"
   include "elementos-pre-textuais/ficha-catalografica.typ"
