@@ -33,7 +33,7 @@
   ))
 
   show figure: it => {
-    text(size: 10pt, it.caption)
+    text(size: 10em / 12, it.caption)
     it.body
   }
 
@@ -60,6 +60,6 @@
   }
   align(center, block(breakable: false, {
     built-in-figure(..args)
-    text(size: 10pt, { "Fonte: " + fonte })
+    text(size: 10em / 12, { "Fonte: " + fonte })
   }))
 }

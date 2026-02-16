@@ -44,7 +44,7 @@
   }
   {
     set text(weight: "bold")
-    align(center)[#text(size: 24pt, titulo)]
+    align(center)[#text(size: 2em, titulo)]
   }
 
   it

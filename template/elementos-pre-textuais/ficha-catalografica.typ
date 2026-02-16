@@ -7,7 +7,7 @@
 #rect(inset: (y: 0.5cm), width: 13.5cm)[
   #set align(left)
   #set par(first-line-indent: 0pt)
-  #set text(size: 11pt)
+  #set text(size: 11em / 12)
   #param.nome-do-autor\
   #h(0.5cm)
   #param.titulo-do-trabalho/ #param.nome-do-autor. -- #param.localidade, #mes,
