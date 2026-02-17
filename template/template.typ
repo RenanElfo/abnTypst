@@ -62,6 +62,8 @@
   include "elementos-pos-textuais/bibliografia.typ"
 }
 
+// Ainda nao tenho certeza se eu quero fazer isso mesmo ou se eu so exponho uma
+// funcao auxiliar que faca isso.
 #let built-in-figure = figure
 #let figure(fonte: none, ..args) = {
   if fonte == none {

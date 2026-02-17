@@ -30,7 +30,7 @@
   [
     #set align(left)
     #param.tipo-de-trabalho apresentada ao #param.curso da #param.instituicao,
-    como parte dos requisitos para obtenção do título de #param.nome-do-titulo
+    como parte dos requisitos para obtenção do título de #param.nome-do-titulo.
   ],
 )
 

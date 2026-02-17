@@ -3,13 +3,10 @@
 #grid(
   columns: (0.14fr, 0.86fr),
   gutter: 15pt,
-  [#align(left + horizon, image("logo_unifor.png", width: 100%))],
+  [#align(left + horizon, image("/typst-logo.png", width: 100%))],
   align(horizon, upper(strong[
-    #parameters.fundacao\
     #parameters.instituicao\
-    #parameters.vice-reitoria\
-    #parameters.diretoria\
-    #parameters.curso\
+    #parameters.curso
   ])),
 )
 

@@ -48,14 +48,15 @@ Uma vez, um anão medieval chamado Gimli disse: #quote(text(
 = Figuras
 == Imagem
 #figure(
-  fonte: "Não foi preciso",
-  image("template/elementos-pre-textuais/logo_unifor.png", width: 20%),
-  caption: [Logo da Unifor],
+  fonte: "Não foi preciso.",
+  image("/shregory.png", width: 80%),
+  caption: [O grande sábio de LaTeX, Shregory, nos ensinando como melhor
+    escrever documentos WYSIWYM.],
 )
 
 == Tabela
 #figure(
-  fonte: "Vozes da minha cabeça",
+  fonte: "Vozes da minha cabeça.",
   align(center, table(
     columns: 4,
     table.header[Hello][World][!][?],

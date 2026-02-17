@@ -3,13 +3,13 @@
     chave: "coracao",
     tipo: "simbolo",
     conteudo: text(fill: rgb("#cc3333"), sym.suit.heart),
-    significado: [Coraçãozinho]
+    significado: [Coraçãozinho],
   ),
   (
     chave: "espada",
     tipo: "simbolo",
     conteudo: sym.suit.spade,
-    significado: [Espadinha]
+    significado: [Espadinha],
   ),
   (
     chave: "paus",
@@ -21,25 +21,24 @@
     chave: "ouros",
     tipo: "simbolo",
     conteudo: text(fill: rgb("#cc3333"), sym.suit.diamond),
-    significado: [Losanguinho]
+    significado: [Losanguinho],
   ),
   (
     chave: "sigma",
     tipo: "grego",
     conteudo: $sigma$,
-    significado: "Constante de Stefan-Boltzmann"
+    significado: "Constante de Stefan-Boltzmann",
   ),
   (
     chave: "x",
     tipo: "subscrito",
     conteudo: $x$,
-    significado: [Derivada em relação a $x$]
+    significado: [Derivada em relação a $x$],
   ),
   (
     chave: "tensor",
     tipo: "sobrescrito",
     conteudo: $arrow(arrow(" "))$,
-    significado: [Tensor de segunda ordem]
-  )
-
+    significado: [Tensor de segunda ordem],
+  ),
 )
