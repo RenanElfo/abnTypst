@@ -65,7 +65,12 @@
 #let built-in-figure = figure
 #let figure(fonte: none, ..args) = {
   if fonte == none {
-    panic("")
+    panic(
+      "
+      As normas ABNT preveem que as ilustrações possuam uma fonte, mesmo que
+      tenham sido produzidas pelo próprio autor.
+      ",
+    )
   }
   align(center, block(breakable: false, {
     built-in-figure(..args)

@@ -7,13 +7,30 @@
 #set par(leading: const.SINGLE-SPACING)
 #lorem(30)@ibge1993 #lorem(20)
 
-=== Espaçamento um e meio
+== Espaçamento um e meio
 #set par(leading: const.ONE-AND-HALF-SPACING)
 #lorem(30)@abntex2-wiki-como-customizar #lorem(20)
 
-==== Espaçamento duplo
+== Espaçamento duplo
 #set par(leading: const.DOUBLE-SPACING)
 #lorem(50)
+
+= Headings
+== Nível 2
+
+#lorem(30)
+
+=== Nível 3
+
+#lorem(30)
+
+==== Nível 4
+
+#lorem(30)
+
+===== Nível 5
+
+#lorem(30)
 
 = Citações
 
