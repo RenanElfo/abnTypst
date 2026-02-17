@@ -19,52 +19,52 @@
 
 #{
   import "/conteudo/lista-de-abreviaturas.typ": abreviaturas
-  let abreviaturas_flattened = abreviaturas
+  let abreviaturas-flattened = abreviaturas
     .sorted(key: t => t.chave)
     .map(t => (t.abreviatura, t.significado))
     .flatten()
 
-    listas.push([
-      #show: const.titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
-      #v(1cm)
-      #set align(right)
-      #block(width: 90%)[
+  listas.push([
+    #show: const.titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
+    #v(1cm)
+    #set align(right)
+    #block(width: 90%)[
       #set align(left)
       #grid(
         columns: (1fr, 4fr),
         row-gutter: 8pt,
         column-gutter: 4pt,
         inset: 1pt,
-        ..abreviaturas_flattened,
-    )
-  ]
-])
+        ..abreviaturas-flattened,
+      )
+    ]
+  ])
 }
 
 #{
   import "/conteudo/lista-de-simbolos.typ": simbolos
 
-  let simbolos_flattened = simbolos
+  let simbolos-flattened = simbolos
     .sorted(key: t => t.chave)
     .map(t => (t.conteudo, t.significado))
     .flatten()
 
 
-listas.push([
-  #show: const.titulo-da-pagina.with(titulo: [Lista de símbolos])
-  #v(1cm)
-  #set align(right)
-  #block(width: 90%)[
-    #set align(left)
-    #grid(
-      columns: (1fr, 5fr),
-      row-gutter: 8pt,
-      column-gutter: 4pt,
-      inset: 1pt,
-      ..simbolos_flattened,
-    )
-  ]
-])
+  listas.push([
+    #show: const.titulo-da-pagina.with(titulo: [Lista de símbolos])
+    #v(1cm)
+    #set align(right)
+    #block(width: 90%)[
+      #set align(left)
+      #grid(
+        columns: (1fr, 5fr),
+        row-gutter: 8pt,
+        column-gutter: 4pt,
+        inset: 1pt,
+        ..simbolos-flattened,
+      )
+    ]
+  ])
 }
 
 #listas.reduce((acc, it) => acc + pagebreak() + it)
