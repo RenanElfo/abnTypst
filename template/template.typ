@@ -1,7 +1,6 @@
 #let template = doc => {
   import "constants.typ" as const
-  import "/metadados.typ": titulo, autor, palavras-chave, keywords, impressao-frente-e-verso
-  import "/conteudo/resumo.typ" as resumo
+  import "/metadados.typ": titulo, autor, palavras-chave, keywords, impressao-frente-e-verso, resumo
 
   set document(
     title: titulo,

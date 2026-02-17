@@ -18,7 +18,7 @@
 ])
 
 #listas.push([
-  #import "/conteudo/lista-de-abreviaturas.typ": abreviaturas
+  #import "/listas-pre-textuais/lista-de-abreviaturas.typ": abreviaturas
   #show: titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
   #v(1cm)
   #set align(right)
@@ -35,7 +35,7 @@
 ])
 
 #listas.push([
-  #import "/conteudo/lista-de-simbolos.typ": simbolos
+  #import "/listas-pre-textuais/lista-de-simbolos.typ": simbolos
   #show: titulo-da-pagina.with(titulo: [Lista de símbolos])
   #v(1cm)
   #set align(right)
