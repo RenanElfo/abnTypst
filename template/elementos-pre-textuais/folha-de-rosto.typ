@@ -1,26 +1,26 @@
-#import "../constants.typ" as const
-#import "/parameters.typ" as param
+#import "../constants.typ": TEXTO-DA-FOLHA-DE-ROSTO, LOCAL-E-DATA
+#import "/metadados.typ": autor, titulo, instituicao, orientador, coorientadores
 #set align(center)
-#text(size: 14pt, param.nome-do-autor)
+#text(size: 14pt, autor)
 
 #v(3cm)
-#block(width: 90%, strong(text(size: 16pt, param.titulo-do-trabalho)))
+#block(width: 90%, strong(text(size: 16pt, titulo)))
 
 #v(3cm)
-#const.TEXTO-DA-FOLHA-DE-ROSTO
+#TEXTO-DA-FOLHA-DE-ROSTO
 
 #v(3cm)
-#text(size: 12pt)[#param.instituicao]
+#text(size: 12pt)[#instituicao]
 
 #v(3cm)
 #[
   #set text(size: 12pt)
-  Orientador: #param.orientador\
-  #for coorientador in param.coorientadores [
+  Orientador: #orientador\
+  #for coorientador in coorientadores [
     Coorientador: #coorientador\
   ]
 ]
 
 #v(1fr)
-#const.LOCAL-E-DATA
+#LOCAL-E-DATA
 #pagebreak()

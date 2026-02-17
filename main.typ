@@ -1,18 +1,18 @@
 #import "template/template.typ": *
-#import "template/constants.typ" as const
+#import "template/constants.typ": SINGLE-SPACING, ONE-AND-HALF-SPACING, DOUBLE-SPACING
 #show: template
 
 = Espaçamento
 == Espaçamento simples
-#set par(leading: const.SINGLE-SPACING)
+#set par(leading: SINGLE-SPACING)
 #lorem(30)@ibge1993 #lorem(20)
 
 === Espaçamento um e meio
-#set par(leading: const.ONE-AND-HALF-SPACING)
+#set par(leading: ONE-AND-HALF-SPACING)
 #lorem(30)@abntex2-wiki-como-customizar #lorem(20)
 
 ==== Espaçamento duplo
-#set par(leading: const.DOUBLE-SPACING)
+#set par(leading: DOUBLE-SPACING)
 #lorem(50)
 
 = Figuras

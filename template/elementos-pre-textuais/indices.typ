@@ -1,5 +1,5 @@
-#import "../constants.typ" as const
-#import "/parameters.typ": impressao-frente-e-verso
+#import "../constants.typ": titulo-da-pagina
+#import "/metadados.typ": impressao-frente-e-verso
 #set outline(title: [])
 #show outline.entry: it => link(
   it.element.location(),
@@ -8,18 +8,18 @@
 #let listas = ()
 
 #listas.push([
-  #show: const.titulo-da-pagina.with(titulo: [Lista de ilustrações])
+  #show: titulo-da-pagina.with(titulo: [Lista de ilustrações])
   #outline(target: figure.where(kind: image))
 ])
 
 #listas.push([
-  #show: const.titulo-da-pagina.with(titulo: [Lista de tabelas])
+  #show: titulo-da-pagina.with(titulo: [Lista de tabelas])
   #outline(target: figure.where(kind: table))
 ])
 
 #listas.push([
   #import "/conteudo/lista-de-abreviaturas.typ": abreviaturas
-  #show: const.titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
+  #show: titulo-da-pagina.with(titulo: [Lista de abreviaturas e siglas])
   #v(1cm)
   #set align(right)
   #block(width: 90%)[
@@ -36,7 +36,7 @@
 
 #listas.push([
   #import "/conteudo/lista-de-simbolos.typ": simbolos
-  #show: const.titulo-da-pagina.with(titulo: [Lista de símbolos])
+  #show: titulo-da-pagina.with(titulo: [Lista de símbolos])
   #v(1cm)
   #set align(right)
   #block(width: 90%)[
@@ -85,6 +85,6 @@
   }
 }
 
-#show: const.titulo-da-pagina.with(titulo: [Sumário])
+#show: titulo-da-pagina.with(titulo: [Sumário])
 #outline()
 #pagebreak()

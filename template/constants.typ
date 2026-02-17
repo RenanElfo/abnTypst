@@ -1,4 +1,4 @@
-#import "/parameters.typ" as param
+#import "/metadados.typ": data, local, tipo-de-trabalho, curso, instituicao, titulacao
 
 #let MONTHS = (
   "janeiro",
@@ -16,12 +16,12 @@
 )
 
 #let DATA = (
-  dia: param.data-de-aprovacao.day(),
-  mes: MONTHS.at(param.data-de-aprovacao.month() - 1),
-  ano: param.data-de-aprovacao.year(),
+  dia: data.day(),
+  mes: MONTHS.at(data.month() - 1),
+  ano: data.year(),
 )
 #let LOCAL-E-DATA = align(center, upper(strong[
-  #param.localidade\
+  #local\
   #DATA.mes, #DATA.ano
 ]))
 #let TEXTO-DA-FOLHA-DE-ROSTO = grid(
@@ -29,8 +29,8 @@
   [],
   [
     #set align(left)
-    #param.tipo-de-trabalho apresentada ao #param.curso da #param.instituicao,
-    como parte dos requisitos para obtenção do título de #param.nome-do-titulo
+    #tipo-de-trabalho apresentada ao #curso da #instituicao,
+    como parte dos requisitos para obtenção do título de #titulacao
   ],
 )
 

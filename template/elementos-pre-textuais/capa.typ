@@ -1,14 +1,14 @@
-#import "/parameters.typ" as parameters
+#import "/metadados.typ": autor, fundacao, instituicao, vice-reitoria, diretoria, curso
 #grid(
   columns: (0.14fr, 0.86fr),
   gutter: 15pt,
   [#align(left + horizon, image("logo_unifor.png", width: 100%))],
   align(horizon, upper(strong[
-    #parameters.fundacao\
-    #parameters.instituicao\
-    #parameters.vice-reitoria\
-    #parameters.diretoria\
-    #parameters.curso\
+    #fundacao\
+    #instituicao\
+    #vice-reitoria\
+    #diretoria\
+    #curso\
   ])),
 )
 
@@ -21,7 +21,7 @@
 ]))
 
 #v(3cm)
-#align(center, upper(strong(parameters.nome-do-autor)))
+#align(center, upper(strong(autor)))
 
 #v(1fr)
 

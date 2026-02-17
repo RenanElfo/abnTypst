@@ -1,5 +1,5 @@
 #let epigrafe() = {
-  import "/parameters.typ" as param
+  import "/metadados.typ" as param
   set align(right)
   set text(hyphenate: false)
   let epigrafe-dict = dictionary(param).at("epigrafe", default: (

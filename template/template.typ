@@ -1,16 +1,16 @@
 #let template = doc => {
   import "constants.typ" as const
-  import "/parameters.typ" as parameters
+  import "/metadados.typ": titulo, autor, palavras-chave, keywords, impressao-frente-e-verso
   import "/conteudo/resumo.typ" as resumo
 
   set document(
-    title: parameters.titulo-do-trabalho,
-    author: (parameters.nome-do-autor),
+    title: titulo,
+    author: (autor),
     description: [#resumo],
-    keywords: parameters.palavras-chave + parameters.keywords,
+    keywords: palavras-chave + keywords,
   )
 
-  let x-margin = if parameters.impressao-frente-e-verso {
+  let x-margin = if impressao-frente-e-verso {
     (inside: 3cm, outside: 2cm)
   } else {
     (left: 3cm, right: 2cm)
