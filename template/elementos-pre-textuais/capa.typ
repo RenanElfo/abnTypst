@@ -1,4 +1,5 @@
 #import "/parameters.typ" as parameters
+
 #grid(
   columns: (0.14fr, 0.86fr),
   gutter: 15pt,
@@ -17,7 +18,7 @@
   #set par(justify: false)
   #set text(hyphenate: false, weight: "semibold")
   #show title: set text(size: 1em / 1.4)
-  #title()
+  #title(parameters.titulo-do-trabalho)
 ]))
 
 #v(3cm)
