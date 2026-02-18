@@ -1,5 +1,6 @@
 #import "template/template.typ": *
 #import "template/constants.typ" as const
+#import "template/funcoes-auxiliares/abreviaturas.typ": adicionar-abreviatura
 #show: template
 
 = Espaçamento
@@ -44,6 +45,17 @@ Uma vez, um anão medieval chamado Gimli disse: #quote(text(
   lorem(50),
   block: true,
 )
+
+= Abreviaturas
+
+Eu consigo adicionar abreviaturas utilizando a função auxiliar
+`adicionar-abreviatura`. Por exemplo, a #adicionar-abreviatura(
+  chave: "abnt",
+  valor: "ABNT",
+  descricao: "Associação Brasileira de Normas Toscas",
+) deixa claro que a primeira vez que você utiliza um termo abreviado, ele deve
++ser escrito por extenso e a a abreviatura deve vir logo em seguida entre
++parênteses.
 
 = Figuras
 == Imagem
