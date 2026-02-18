@@ -54,8 +54,20 @@ Eu consigo adicionar abreviaturas utilizando a função auxiliar
   valor: "ABNT",
   descricao: "Associação Brasileira de Normas Toscas",
 ) deixa claro que a primeira vez que você utiliza um termo abreviado, ele deve
-+ser escrito por extenso e a a abreviatura deve vir logo em seguida entre
-+parênteses.
+ser escrito por extenso e a a abreviatura deve vir logo em seguida entre
+parênteses.
+
+Assim, eu consigo citar coisas interessantes, como #adicionar-abreviatura(
+  chave: "fcpremix",
+  valor: [F.C.P.R.E.M.I.X],
+  descricao: [Uma música legal do The Fall of Troy],
+) ou a técnica de escrever bem código chamada de #adicionar-abreviatura(
+  chave: "kiss",
+  valor: [K.I.S.S.],
+  descricao: [Keep It Simple Stupid],
+).
+
+= Símbolos
 
 = Figuras
 == Imagem
