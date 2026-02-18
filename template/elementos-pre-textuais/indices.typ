@@ -1,7 +1,9 @@
-#import "/conteudo/lista-de-abreviaturas.typ": abreviaturas
-#import "/conteudo/lista-de-simbolos.typ": simbolos
+// #import "/conteudo/lista-de-abreviaturas.typ": abreviaturas
+#include "/conteudo/lista-de-simbolos.typ"
 #import "/template/funcoes-auxiliares/indices.typ": indices
 #import "/template/funcoes-auxiliares/titulo-da-pagina.typ": titulo-da-pagina
+#import "/template/funcoes-auxiliares/abreviaturas.typ": get-abreviaturas
+#import "/template/funcoes-auxiliares/abreviaturas.typ": get-simbolos
 
 #set outline(title: [])
 #show outline.entry: it => link(
@@ -13,8 +15,8 @@
 
 #adicionar-figuras([Lista de ilustrações], target: figure.where(kind: image))
 #adicionar-figuras([Lista de tabelas], target: figure.where(kind: table))
-#adicionar-explicacoes([Lista de abreviaturas e siglas], abreviaturas)
-#adicionar-explicacoes([Lista de símbolos], simbolos)
+#adicionar-explicacoes(get-abreviaturas())
+// #adicionar-explicacoes(get-simbolos())
 #imprimir-listas()
 
 #show outline.entry: it => [
