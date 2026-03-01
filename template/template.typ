@@ -57,9 +57,37 @@
   include "elementos-pre-textuais/abstract.typ"
   include "elementos-pre-textuais/indices.typ"
 
+  let paginas-pre-textuais = counter("paginas-pre-textuais")
+  context {
+    // Precisamos subtrair um, pois a ficha catalografica nao eh contada.
+    // Precisamos subtrair um, tambem, porque o contador pega a primeira
+    // folha textual. Por isso, subtraimos 2.
+    paginas-pre-textuais.update(counter(page).get().first() - 2)
+  }
+  counter(page).update(1)
+  set page(
+    header: context {
+      let number-alignment = if (
+        parameters.impressao-frente-e-verso == false
+          or calc.even(counter(page).get().first())
+      ) {
+        right
+      } else {
+        left
+      }
+      set align(number-alignment)
+      counter(page).display("1")
+    },
+  )
+
   doc
 
   include "elementos-pos-textuais/bibliografia.typ"
+  context {
+    counter(page).update(
+      counter(page).get().first() + paginas-pre-textuais.get().first(),
+    )
+  }
 }
 
 // Ainda nao tenho certeza se eu quero fazer isso mesmo ou se eu so exponho uma
