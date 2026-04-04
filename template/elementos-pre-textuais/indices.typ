@@ -3,7 +3,7 @@
 #import "/template/funcoes-auxiliares/indices.typ": indices
 #import "/template/funcoes-auxiliares/titulo-da-pagina.typ": titulo-da-pagina
 #import "/template/funcoes-auxiliares/abreviaturas.typ": get-abreviaturas
-#import "/template/funcoes-auxiliares/abreviaturas.typ": get-simbolos
+#import "/template/funcoes-auxiliares/simbolos.typ": get-simbolos
 
 #set outline(title: [])
 #show outline.entry: it => link(
@@ -16,7 +16,7 @@
 #adicionar-figuras([Lista de ilustrações], target: figure.where(kind: image))
 #adicionar-figuras([Lista de tabelas], target: figure.where(kind: table))
 #adicionar-explicacoes(get-abreviaturas())
-// #adicionar-explicacoes(get-simbolos())
+#adicionar-explicacoes(get-simbolos())
 #imprimir-listas()
 
 #show outline.entry: it => [

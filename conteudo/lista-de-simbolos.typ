@@ -1,5 +1,5 @@
-#import "/template/funcoes-auxiliares/abreviaturas.typ": adicionar-simbolo
-#import "/template/funcoes-auxiliares/abreviaturas.typ": get-simbolos
+#import "/template/funcoes-auxiliares/simbolos.typ": adicionar-simbolo
+#import "/template/funcoes-auxiliares/simbolos.typ": get-simbolos
 
 #adicionar-simbolo(
   chave: "coracao",
