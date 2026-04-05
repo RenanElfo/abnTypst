@@ -14,6 +14,7 @@
 == Espaçamento duplo
 #set par(leading: const.DOUBLE-SPACING)
 #lorem(50)
+#set par(leading: const.ONE-AND-HALF-SPACING)
 
 = Headings
 == Nível 2
